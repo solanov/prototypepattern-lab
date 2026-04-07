@@ -1,11 +1,13 @@
 public class TestAnimal {
     public static void main(String[] args) {
         AnimalRegistry registry = new AnimalRegistry();
-
         Animal sheep = registry.createSheep();
-        ((Sheep) sheep).setName("Dolly"); 
         Animal cow = registry.createCow();
         Animal horse = registry.createHorse();
+
+        ((Sheep) sheep).setName("Dolly"); 
+        ((Cow) cow).setSound("Moo!"); 
+        ((Horse) horse).setColor("Black"); 
 
         System.out.println(sheep.getType() + " named " + ((Sheep) sheep).getName());
         System.out.println(cow.getType() + " sounds " + ((Cow) cow).getSound());
