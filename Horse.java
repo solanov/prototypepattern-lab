@@ -46,6 +46,6 @@ public class Horse implements Animal {
 
     @Override
     public String toString() {
-        return "Horse [legs=" + legs + ", sound=" + sound + ", food=" + food + ", color=" + color + "]";
+        return "A "+color +" coloured "+ this.getType() +" has " + legs + " legs. It eats " + food + " and says " + sound;
     }
 }

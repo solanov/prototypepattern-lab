@@ -45,6 +45,6 @@ public class Sheep implements Animal {
 
     @Override
     public String toString() {
-        return "Sheep [legs=" + legs + ", sound=" + sound + ", food=" + food + ", name=" + name + "]";
+        return "A " + this.getType() + " named " + name + " has " + legs + " legs. It eats " + food + " and says " + sound;
     }
 }

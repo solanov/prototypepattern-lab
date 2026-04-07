@@ -9,22 +9,22 @@ public class TestAnimal {
         ((Cow) cow).setSound("Moo!"); 
         ((Horse) horse).setColor("Black"); 
 
-        System.out.println(sheep.getType() + " named " + ((Sheep) sheep).getName());
-        System.out.println(cow.getType() + " sounds " + ((Cow) cow).getSound());
-        System.out.println(horse.getType() + " color is " + ((Horse) horse).getColor());
+        System.out.println(sheep.toString() + "\n");
+        System.out.println(cow.toString() + "\n");
+        System.out.println(horse.toString() + "\n");
 
         Animal sheep2 = registry.createSheep();
         ((Sheep) sheep2).setName("Molly"); 
-        System.out.println(sheep2.getType() + " named " + ((Sheep) sheep2).getName()); 
+        System.out.println(sheep2.toString() + "\n");
 
         Animal cow2 = registry.createCow();
-        ((Cow) cow2).setFood("Grass"); 
+        ((Cow) cow2).setFood("Corn"); 
         ((Cow) cow2).setSound("Maa!"); 
-        System.out.println(cow2.getType() + " sounds " + ((Cow) cow2).getSound()); 
-        System.out.println(cow2.getType() + " eats " + ((Cow) cow2).getFood());    
+        System.out.println(cow2.toString() + "\n");
 
         Animal horse2 = registry.createHorse();
         ((Horse) horse2).setColor("Brown"); 
-        System.out.println(horse2.getType() + " is " + ((Horse) horse2).getColor());
+        ((Horse) horse2).setSound("NAEEEEE!!!!"); 
+        System.out.println(horse2.toString() + "\n");
     }
 }
