@@ -8,19 +8,22 @@ public class TestAnimal {
 
         // Clone a cow and a horse
         Animal clonedCow = registry.createCow();
+        
         Animal clonedHorse = registry.createHorse();
 
+        ((Horse) clonedHorse).setColor("Black");
+
         // Test the cloned objects
-        System.out.println("Created: " + clonedSheep1.getType() + " named " + ((Sheep)clonedSheep1).getName());
+        System.out.println("Sheep generated: " + clonedSheep1);
         clonedSheep1.makeSound();
 
-        System.out.println("\nCreated: " + clonedSheep2.getType() + " named " + ((Sheep)clonedSheep2).getName());
+       System.out.println("Sheep generated: " + clonedSheep2);
         clonedSheep2.makeSound();
 
-        System.out.println("\nCreated: " + clonedCow.getType());
+        System.out.println("Cow generated: " + clonedCow);
         clonedCow.makeSound();
 
-        System.out.println("\nCreated: " + clonedHorse.getType());
+        System.out.println("Horse generated: " + clonedHorse);
         clonedHorse.makeSound();
     }
 }
