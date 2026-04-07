@@ -2,28 +2,27 @@ public class TestAnimal {
     public static void main(String[] args) {
         AnimalRegistry registry = new AnimalRegistry();
 
-        // Clone and customize a sheep
-        Animal clonedSheep1 = registry.createSheep("Dolly");
-        Animal clonedSheep2 = registry.createSheep("Shaun");
+        Animal sheep = registry.createSheep();
+        ((Sheep) sheep).setName("Dolly"); 
+        Animal cow = registry.createCow();
+        Animal horse = registry.createHorse();
 
-        // Clone a cow and a horse
-        Animal clonedCow = registry.createCow();
-        
-        Animal clonedHorse = registry.createHorse();
+        System.out.println(sheep.getType() + " named " + ((Sheep) sheep).getName());
+        System.out.println(cow.getType() + " sounds " + ((Cow) cow).getSound());
+        System.out.println(horse.getType() + " color is " + ((Horse) horse).getColor());
 
-        ((Horse) clonedHorse).setColor("Black");
+        Animal sheep2 = registry.createSheep();
+        ((Sheep) sheep2).setName("Molly"); 
+        System.out.println(sheep2.getType() + " named " + ((Sheep) sheep2).getName()); 
 
-        // Test the cloned objects
-        System.out.println("Sheep generated: " + clonedSheep1);
-        clonedSheep1.makeSound();
+        Animal cow2 = registry.createCow();
+        ((Cow) cow2).setFood("Grass"); 
+        ((Cow) cow2).setSound("Maa!"); 
+        System.out.println(cow2.getType() + " sounds " + ((Cow) cow2).getSound()); 
+        System.out.println(cow2.getType() + " eats " + ((Cow) cow2).getFood());    
 
-       System.out.println("Sheep generated: " + clonedSheep2);
-        clonedSheep2.makeSound();
-
-        System.out.println("Cow generated: " + clonedCow);
-        clonedCow.makeSound();
-
-        System.out.println("Horse generated: " + clonedHorse);
-        clonedHorse.makeSound();
+        Animal horse2 = registry.createHorse();
+        ((Horse) horse2).setColor("Brown"); 
+        System.out.println(horse2.getType() + " is " + ((Horse) horse2).getColor());
     }
 }

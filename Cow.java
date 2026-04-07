@@ -9,38 +9,24 @@ public class Cow implements Animal {
         this.food = "Grass";
     }
 
-    public void setLegs(Integer legs){
-        this.legs=legs;
+    // NEW: Copy Constructor
+    public Cow(Cow source) {
+        this.legs = source.legs;
+        this.sound = source.sound;
+        this.food = source.food;
     }
 
-    public Integer getLegs(){
-        return legs;
-    }
-
-    public void setSound(String sound){
-        this.sound=sound;
-    }
-
-    public String getSound(){
-        return sound;
-    }
-
-    public void setFood(String food){
-        this.food=food;
-    }
-
-    public String getFood(){
-        return food;
-    }
+    public void setLegs(Integer legs){ this.legs=legs; }
+    public Integer getLegs(){ return legs; }
+    public void setSound(String sound){ this.sound=sound; }
+    public String getSound(){ return sound; }
+    public void setFood(String food){ this.food=food; }
+    public String getFood(){ return food; }
 
     @Override
     public Animal clone() {
-        try {
-            return (Cow) super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-            return null;
-        }
+        // Use the copy constructor instead of super.clone()
+        return new Cow(this);
     }
 
     @Override
@@ -53,7 +39,6 @@ public class Cow implements Animal {
         return "Cow";
     }
 
-    // NEW: Override toString() to print attributes
     @Override
     public String toString() {
         return "Cow [legs=" + legs + ", sound=" + sound + ", food=" + food + "]";

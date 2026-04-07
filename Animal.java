@@ -1,4 +1,4 @@
-public interface Animal extends Cloneable {
+public interface Animal {
     Animal clone();
     void makeSound();
     String getType();
