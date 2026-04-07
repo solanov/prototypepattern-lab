@@ -28,4 +28,10 @@ public class Cow implements Animal {
     public String getType() {
         return "Cow";
     }
+
+    // NEW: Override toString() to print attributes
+    @Override
+    public String toString() {
+        return "Cow [legs=" + legs + ", sound=" + sound + ", food=" + food + "]";
+    }
 }

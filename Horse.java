@@ -8,7 +8,7 @@ public class Horse implements Animal {
         this.legs = 4;
         this.sound = "Neigh";
         this.food = "Hay";
-        this.color = "Brown"; // Default color
+        this.color = "Brown";
     }
 
     @Override
@@ -29,5 +29,11 @@ public class Horse implements Animal {
     @Override
     public String getType() {
         return "Horse";
+    }
+
+    // NEW: Override toString() to print attributes
+    @Override
+    public String toString() {
+        return "Horse [legs=" + legs + ", sound=" + sound + ", food=" + food + ", color=" + color + "]";
     }
 }

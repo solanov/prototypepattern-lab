@@ -37,4 +37,10 @@ public class Sheep implements Animal {
     public String getType() {
         return "Sheep";
     }
+
+    // NEW: Override toString() to print attributes
+    @Override
+    public String toString() {
+        return "Sheep [legs=" + legs + ", sound=" + sound + ", food=" + food + ", name=" + name + "]";
+    }
 }
